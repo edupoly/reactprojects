@@ -12,7 +12,8 @@ import {
   } from "react-router-dom";
 import store from './app/store';
 import { Provider } from 'react-redux';import Pizzas from './features/pizzas/Pizzas';
-import Dessets from './features/desserts/Dessets';
+import Desserts from './features/desserts/Desserts';
+import Home from './Home';
 ;
   const router = createBrowserRouter([
     {
@@ -20,12 +21,16 @@ import Dessets from './features/desserts/Dessets';
       element: <App/>,
       children:[
         {
+          path:"/",
+          element:<Home></Home>
+        },
+        {
             path:"/pizzas",
             element:<Pizzas></Pizzas>
         },
         {
             path:"/desserts",
-            element:<Dessets></Dessets>
+            element:<Desserts></Desserts>
         },
       ]
     }
