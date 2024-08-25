@@ -7,7 +7,8 @@ import '../node_modules/bootstrap/dist/js/bootstrap.min'
 import { createBrowserRouter,RouterProvider} from "react-router-dom";
 import Home from './Home';
 import Pizzas from './features/pizzas/Pizzas';
-
+import { Provider } from 'react-redux';
+import { store } from './app/store';
 const router = createBrowserRouter([
     {
         path: "/",
@@ -27,8 +28,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
-    <RouterProvider router={router} />
+    <Provider store={store}>
+        <RouterProvider router={router} />
+    </Provider>
 
 );
 

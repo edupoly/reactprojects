@@ -16,7 +16,7 @@ function App() {
         <div style={{width:"75%"}}>
           <Outlet></Outlet>
         </div>
-        <div style={{width:"25%"}}>
+        <div style={{width:"25%",height:'500px'}}>
           <Cart></Cart>
         </div>
       </div>
