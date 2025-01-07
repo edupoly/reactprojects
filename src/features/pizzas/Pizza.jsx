@@ -15,7 +15,7 @@ function Pizza({pizza}) {
         dispatch(addToCart({...pizza,price:selectedSizeAndCrustPrice}));
     }
     return (
-        <div className='w-25 p-2 d-flex flex-column justify-content-between'>
+        <div className='col-md-3 col-sm-4 p-2 d-flex flex-column justify-content-between'>
             <div>
             <img src={pizza.img} className='rounded w-100' alt="" />
             <p>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { useGetAllPizzasQuery } from '../../services/pizzaApi'
 import Pizza from './Pizza';
-
+import pizzas from '../../services/pizzas.json'
 function Pizzas() {
-    var {isLoading,data:pizzas} = useGetAllPizzasQuery();
+    // var {isLoading,data:pizzas} = useGetAllPizzasQuery();
     var [isVeg,setIsVeg] = React.useState(false);
 
     function vegFilter(){
@@ -29,9 +29,9 @@ function Pizzas() {
                 </div>
             </div>
         </div>
-        <div className='d-flex flex-wrap'>
+        <div className='row m-3'>
             {
-                !isLoading && vegFilter().map((pizza,i)=>{
+                vegFilter().map((pizza,i)=>{
                     return  <Pizza pizza={pizza}  key={i}></Pizza>
                 })
             }
