@@ -20,9 +20,9 @@ function Pizzas() {
     }
   return (
     <div className=''>
-        <div className='d-flex justify-content-between px-3'>
+        <div className='d-flex justify-content-between p-3 '>
             <b>Pizzas</b>
-            <div>
+            <div className=''>
                 <div className="form-check form-switch">
                     <label className="form-check-label">Veg:{isVeg}</label>
                     <input className="form-check-input"  value={true} onChange={(e)=>{setIsVeg(e.target.checked)}} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
