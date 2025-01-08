@@ -13,11 +13,11 @@ function Mobilecart() {
         return total;
     }
   return (
-    <div className='d-flex vw-100 align-items-center justify-content-between px-5 py-2'>
+    <div className='d-flex vw-100 align-items-center justify-content-between p-1'>
         <div className='fs-1'>Cart</div>
         <div>
             Count:
-            <span className='p-2 px-3 m-1 rounded bg-info'>{cartItems.length}</span>
+            <span className='p-2 rounded bg-info'>{cartItems.length}</span>
         </div>
         <div>
             <b>Total: Rs. {getTotal()*10}</b>
